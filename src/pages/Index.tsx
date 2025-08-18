@@ -60,8 +60,8 @@ export default function Index() {
 
               {
                 icon: "Briefcase",
-                title: "Арбитражные споры",
-                description: "Представительство в арбитражных судах всех инстанций"
+                title: "Судебные споры",
+                description: "Представительство в судах всех инстанций"
               },
               {
                 icon: "Home",
