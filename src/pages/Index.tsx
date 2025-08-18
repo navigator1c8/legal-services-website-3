@@ -73,11 +73,7 @@ export default function Index() {
                 title: "Трудовое право",
                 description: "Защита трудовых прав, оформление отношений с персоналом"
               },
-              {
-                icon: "Shield",
-                title: "Уголовная защита",
-                description: "Защита в уголовных делах, представительство в суде"
-              },
+
               {
                 icon: "FileCheck",
                 title: "Договорное право",
