@@ -57,11 +57,7 @@ export default function Index() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: "Scale",
-                title: "Корпоративное право",
-                description: "Регистрация компаний, корпоративные споры, сделки M&A"
-              },
+
               {
                 icon: "Briefcase",
                 title: "Арбитражные споры",
