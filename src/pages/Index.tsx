@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -57,6 +58,66 @@ export default function Index() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+              {
+                icon: "Building",
+                title: "Корпоративное право",
+                description: "Регистрация компаний, корпоративные споры, реорганизация",
+                link: "/corporate-law"
+              },
+              {
+                icon: "Home",
+                title: "Недвижимость",
+                description: "Сопровождение сделок, оформление прав, земельные вопросы",
+                link: "/real-estate"
+              },
+              {
+                icon: "Users",
+                title: "Трудовое право",
+                description: "Защита трудовых прав, оформление отношений с персоналом",
+                link: "/labor-law"
+              },
+              {
+                icon: "Heart",
+                title: "Семейное право",
+                description: "Развод, алименты, раздел имущества, опека",
+                link: "/family-law"
+              },
+              {
+                icon: "Shield",
+                title: "Уголовное право",
+                description: "Защита по уголовным делам, представительство в суде",
+                link: "/criminal-law"
+              },
+              {
+                icon: "Calculator",
+                title: "Налоговое право",
+                description: "Налоговое планирование, споры с ФНС, оптимизация",
+                link: "/tax-law"
+              },
+              {
+                icon: "Copyright",
+                title: "Интеллектуальная собственность",
+                description: "Защита авторских прав, регистрация товарных знаков",
+                link: "/intellectual-property"
+              },
+              {
+                icon: "TrendingDown",
+                title: "Банкротство",
+                description: "Процедуры банкротства физических и юридических лиц",
+                link: "/bankruptcy-law"
+              },
+              {
+                icon: "Plane",
+                title: "Миграционное право",
+                description: "Получение гражданства, виз, разрешений на работу",
+                link: "/migration-law"
+              },
+              {
+                icon: "Scale",
+                title: "Арбитражные споры",
+                description: "Представительство в арбитражных судах",
+                link: "/arbitration-disputes"
+              },
 
               {
                 icon: "Briefcase",
@@ -77,10 +138,54 @@ export default function Index() {
               {
                 icon: "FileCheck",
                 title: "Договорное право",
-                description: "Составление и анализ договоров, правовая экспертиза"
+                description: "Составление и анализ договоров, правовая экспертиза",
+                link: "/contract-law"
+              },
+              {
+                icon: "MapPin",
+                title: "Земельное право",
+                description: "Оформление земельных участков, изменение категории",
+                link: "/land-law"
+              },
+              {
+                icon: "Car",
+                title: "Страховое право",
+                description: "Взыскание страховых выплат, споры со страховщиками",
+                link: "/insurance-law"
+              },
+              {
+                icon: "Stethoscope",
+                title: "Медицинское право",
+                description: "Защита прав пациентов, возмещение вреда",
+                link: "/medical-law"
+              },
+              {
+                icon: "ShoppingCart",
+                title: "Защита прав потребителей",
+                description: "Возврат товаров, защита от некачественных услуг",
+                link: "/consumer-rights"
+              },
+              {
+                icon: "Building2",
+                title: "Строительное право",
+                description: "Правовое сопровождение строительных проектов",
+                link: "/construction-law"
+              },
+              {
+                icon: "DollarSign",
+                title: "Взыскание долгов",
+                description: "Профессиональное взыскание дебиторской задолженности",
+                link: "/debt-collection"
+              },
+              {
+                icon: "AlertTriangle",
+                title: "Административное право",
+                description: "Защита от административных правонарушений, обжалование штрафов",
+                link: "/administrative-law"
               }
             ].map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow animate-scale-in border-0 bg-white">
+              <Link key={index} to={service.link}>
+                <Card className="hover:shadow-lg transition-shadow animate-scale-in border-0 bg-white h-full">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon name={service.icon as any} className="text-primary" size={32} />
@@ -93,6 +198,7 @@ export default function Index() {
                   </CardDescription>
                 </CardContent>
               </Card>
+              </Link>
             ))}
           </div>
         </div>
